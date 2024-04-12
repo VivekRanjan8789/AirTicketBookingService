@@ -23,14 +23,25 @@ module.exports = {
         defaultValue: 'InProcess',
         values: ['InProcess', 'Booked', 'Cancelled']
       },
-      createdAt: {
+      noOfSeats: {
+        type: DataTypes.INTEGER,
         allowNull: false,
-        type: Sequelize.DATE
+        defaultValue: 1
+      },
+      totalCost: {
+         type: DataTypes.INTEGER,
+         allowNull: false,
+         defaultValue: 0
+       },
+       createdAt: {
+          allowNull: false,
+          type: Sequelize.DATE
       },
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      }
+      },
+
     });
   },
   async down(queryInterface, Sequelize) {
