@@ -6,4 +6,5 @@ const PORT = process.env.PORT
 
 module.exports = {
     PORT,
+    FLIGHT_SERVICE_PATH: process.env.FLIGHT_SERVICE_PATH
 }
